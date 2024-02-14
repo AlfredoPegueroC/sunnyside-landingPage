@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap");
+
+:root {
+  /* PRIMARY COLOR */
+  --clr-primary-100: hsl(7, 99%, 70%);
+  --clr-primary-200: hsl(51, 100%, 49%);
+  --clr-primary-300: hsl(167, 40%, 24%);
+  --clr-primary-400: hsl(198, 62%, 26%);
+  --clr-primary-500: hsl(168, 34%, 41%);
+
+  /* NEUTRAL */
+  --clr-neutral-100: hsl(212, 27%, 19%);
+  --clr-neutral-200: hsl(213, 9%, 39%);
+  --clr-neutral-300: hsl(232, 10%, 55%);
+  --clr-neutral-400: hsl(210, 4%, 67%);
+  --clr-neutral-500: hsl(0, 0%, 100%);
+
+  /* FONT FAMILY */
+  --ff-100: 'Barlow', sans-serif;
+  --ff-200: 'Fraunces', serif;
+  
+  /* FONT WEIGHT */
+
+  --fw-600: 600;
+  --fw-700: 700;
+  --fw-900: 900;
+}
+
+* {
+  font: inherit;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+img,
+video,
+svg {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+body {
+  min-height: 100dvh;
+}
+
+p {
+  text-wrap: pretty;
+}
+.flex{
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+.header{
+  position: relative;
+}
+.navbar{
+  position: absolute;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  top: 0;
+  width: 100%;
+}
+.links{
+  display: none;
+}
+.hero{
+  position: absolute;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  letter-spacing: .3rem;
+  line-height: 0.9;
+  top: 7rem;
+
+}
+.hero .title{
+  font-size: 3.5rem;
+  color: var(--clr-neutral-500);
+  font-weight: var(--fw-900);
+}
+
+/* BRAND SECTION */
+.brand_description{
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+}
+.brand_description .title{
+  font-size: 2rem;
+  font-weight: var(--fw-700);
+}
+.brand_description .description{
+  color: var(--clr-neutral-300);
+  line-height: 1.5;
+}
+.brand_description a{
+  cursor: pointer;
+  position: relative;
+  font-size: 1.2rem;
+  text-decoration: none;
+  font-weight: var(--fw-900);
+  text-transform: uppercase;
+  color: var(--clr-neutral-100);
+  z-index: 100;
+}
+
+.brand_description a::after{
+  position: absolute;
+  bottom: 0rem;
+  left: -0.3rem;
+  content: "";
+  width: 105%;
+  height: 8px;
+  border-radius: 50px;
+  z-index: -1;
+}
+.brand_description a.transform::after{
+  background: hsla(51, 100%, 49%, 0.3);
+}
+.brand_description a.standout::after{
+  background: hsla(7, 99%, 70%, 0.3);
+}
+/* BRAND SECTION END */
+.design_items{
+  position: relative;
+}
+.design_description{
+  color: var(--clr-primary-300);
+  position: absolute;
+  bottom: 2rem;
+  z-index: 10;
+  text-align: center;
+  padding: 1rem;
+}
+.design_description:last-child{
+  color: var(--clr-primary-400);
+}
+.design_title{
+  font-size: 2rem;
+  font-weight: var(--fw-900);
+}
+.design_description p{
+  margin-top: 1rem;
+}
+
+
+/* CLIENT SECTION */
+.testimonial{
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 1rem;
+  gap: 3.5rem;
+}
+.testimonial h2{
+  font-weight: var(--fw-900);
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  color: var(--clr-neutral-400);
+  
+}
+.testimonial_client{
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+.testimonial_client img{
+  border-radius: 50%;
+}
+.testimonial_client .testimonial_description{
+  line-height: 1.7;
+  color: var(--clr-neutral-200);
+  font-size: 1.125rem;
+  font-weight: var(--fw-600);
+}
+.testimonial_client .testimonial_name{
+  font-weight: var(--fw-900);
+  font-size: 1.3rem;
+  line-height: 1.7;
+}
+.testimonial_client .testimonial_name span{
+  display: block;
+  font-size: 1rem;
+  color: var(--clr-neutral-400);
+  font-weight: var(--fw-600); 
+}
+
+/* GALLERY */
+.gallery{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(150px, 1fr));
+}
+
+/* FOOTER */
+.footer{
+  padding: 2rem;
+  background: hsl(167, 44%, 70%);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 3rem 1rem;
+}
+.links_footer{
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+.links_footer .links_items{
+  list-style: none;
+}
+.links_footer .links_items a{
+  text-decoration: none;
+  color: var(--clr-primary-500);
+  font-weight: var(--fw-900);
+}
