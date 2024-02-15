@@ -172,6 +172,13 @@ p {
 .brand_description a.standout::after {
   background: hsla(7, 99%, 70%, 0.3);
 }
+.brand_description a.transform:hover::after {
+  background: var(--clr-primary-200)
+}
+.brand_description a.standout:hover::after {
+  background: var(--clr-primary-100);
+}
+
 /* BRAND SECTION END */
 .design_items {
   position: relative;
