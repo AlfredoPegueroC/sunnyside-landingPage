@@ -1,0 +1,135 @@
+@media (width > 400px) {
+  .navbar .links.active {
+    width: 92%;
+  }
+}
+@media (min-width: 800px) {
+  .brand_items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .brand_items.first picture {
+    grid-area: 1/2;
+  }
+
+  .design {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .testimonial {
+    padding: 8rem;
+  }
+  .testimonial h2 {
+    font-size: 1.5rem;
+  }
+  .clients {
+    flex-direction: row;
+    gap: 5rem;
+  }
+
+  .testimonial_client {
+    max-width: 400px;
+  }
+
+  .navbar .links.active {
+    width: 95%;
+  }
+}
+
+@media (min-width: 1000px) {
+  .navbar {
+    padding: 2rem;
+  }
+
+  .navbar .links.active::after {
+    display: none;
+  }
+  .navbar .links.active,
+  .navbar .links {
+    position: relative;
+    background: none;
+    top: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 2rem;
+    margin-left: auto;
+    max-width: max-content;
+  }
+  .navbar .links .links_items {
+    list-style: none;
+  }
+  .navbar .links .links_items a {
+    text-decoration: none;
+    color: var(--clr-neutral-500);
+    font-size: 1.3rem;
+  }
+
+  .navbar .links_items:last-child a {
+    color: var(--clr-neutral-100);
+  }
+  .navbar .links_items:last-child a {
+    color: var(--clr-neutral-100);
+    background: var(--clr-neutral-500);
+  }
+  .navbar .links_items:last-child a:hover {
+    cursor: pointer;
+    background: #6fcfff;
+    color: white;
+  }
+  .navbar .nav_btn {
+    display: none;
+  }
+
+  .hero .title {
+    margin-top: 4rem;
+    font-size: 5.5rem;
+  }
+  .arrow {
+    margin-top: 5rem;
+  }
+
+  .brand_items {
+    place-items: center;
+  }
+  /* BRAND */
+  .brand_description {
+    align-items: flex-start;
+    text-align: left;
+    gap: 2rem;
+  }
+  .brand_description .title {
+    font-size: 3rem;
+    max-width: 400px;
+  }
+  .brand_description .description {
+    font-size: 1.25rem;
+  }
+  /* DESIGN */
+  .design_description {
+    max-width: 500px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .design_description .design_title {
+    font-size: 3rem;
+  }
+  .design_description p {
+    font-size: 1.125rem;
+  }
+  .design_description.photography {
+    margin-bottom: 1rem;
+  }
+}
+@media (min-width: 1200px){
+  .hero .title {
+    margin-top: 5rem;
+    font-size: 6.3rem;
+  }
+  .arrow {
+    margin-top: 7rem;
+  }
+}
